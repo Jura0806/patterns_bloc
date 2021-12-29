@@ -45,8 +45,7 @@ class _HomePageState extends State<HomePage> {
         foregroundColor: Colors.white,
         child: Icon(Icons.add),
         onPressed: () {
-          //Navigator.push(
-             // context, MaterialPageRoute(builder: (context) => CreatePost()));
+         BlocProvider.of<ListPostCubit>(context).callCreatePage(context);
         },
       ),
     );

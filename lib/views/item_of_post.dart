@@ -33,7 +33,7 @@ Widget itemOfList(BuildContext context, Post post) {
         color: Colors.indigo,
         icon: Icons.edit,
         onTap: (){
-          //Navigator.push(context, MaterialPageRoute(builder: (context) => UpdatePage(title: post.title,body: post.body,id: post.id,)));
+          BlocProvider.of<ListPostCubit>(context).callUpdatePage(context, post);
         },
       ),
     ],
